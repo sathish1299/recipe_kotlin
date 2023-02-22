@@ -65,4 +65,5 @@ class SettingsFragment : MyBaseFragment(R.layout.fragment_settings) {
         }
     }
 
+
 }
