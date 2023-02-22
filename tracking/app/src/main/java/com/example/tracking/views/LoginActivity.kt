@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         initViews()
+
     }
     fun initViews(){
         val email = sharedPrefManager.getPreference(Constants.EMAIL)

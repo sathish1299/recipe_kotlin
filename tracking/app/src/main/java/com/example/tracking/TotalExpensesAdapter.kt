@@ -29,6 +29,7 @@ class TotalExpensesAdapter (private val expensesList : ArrayList<Expenses>, var 
         return expensesList.size
     }
 
+
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.titleTV)
         val amount: TextView = itemView.findViewById(R.id.amountTV)

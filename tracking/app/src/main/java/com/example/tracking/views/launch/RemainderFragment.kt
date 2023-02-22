@@ -44,6 +44,7 @@ class RemainderFragment : MyBaseFragment(R.layout.fragment_remainder) {
         binding.expensesRV.layoutManager = LinearLayoutManager(context,
             LinearLayoutManager.VERTICAL,false)
         getData()
+
     }
     fun getData(){
         for(i in title.indices){

@@ -94,6 +94,7 @@ class SignUpActivity : AppCompatActivity() {
             snackbarBg = R.color.black
             snackbarTextColor = R.color.white
         }
+
         snackBarView.setBackgroundColor(ContextCompat.getColor(this, snackbarBg))
         val textView =
             snackBarView.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)

@@ -61,6 +61,7 @@ val binding by viewBinding (FragmentHistoryBinding::bind)
     }
     override fun onErrorCalled(it: String?) {
         TODO("Not yet implemented")
+
     }
 
     override fun initObservers() {

@@ -25,6 +25,7 @@ class ExpensesAdapter (private val expensesList : ArrayList<Expenses>, var conte
         holder.amount.text = currentItem.rupees
     }
 
+
     override fun getItemCount(): Int {
 
         return expensesList.size

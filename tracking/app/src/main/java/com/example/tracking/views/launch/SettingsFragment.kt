@@ -28,6 +28,7 @@ class SettingsFragment : MyBaseFragment(R.layout.fragment_settings) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
 

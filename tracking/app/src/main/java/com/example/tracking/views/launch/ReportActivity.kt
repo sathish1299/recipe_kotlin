@@ -36,6 +36,7 @@ class ReportActivity : AppCompatActivity() {
         title = arrayOf("HouseLoan","Groceries","Current Bill",titles!!)
         amount = arrayOf("2000","3000","4000",amounts!!)
         initViews()
+
     }
     fun initViews(){
         binding.totalExpensesRV.layoutManager = LinearLayoutManager(this,

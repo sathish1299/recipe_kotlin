@@ -41,4 +41,5 @@ class ReminderAdapter  (private val expensesList : ArrayList<Expenses>, var cont
         val amount: TextView = itemView.findViewById(R.id.amountTV)
         val switch : SwitchCompat = itemView.findViewById(R.id.switchs)
     }
+
 }

@@ -38,4 +38,5 @@ class ViewActivity : AppCompatActivity() {
         }
         binding.expensesRV.adapter = ExpensesAdapter(dataList!!,this)
     }
+
 }

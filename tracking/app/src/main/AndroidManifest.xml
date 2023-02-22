@@ -22,10 +22,6 @@
         <activity
             android:name=".views.SignUpActivity"
             android:exported="true" />
-        <activity
-            android:name=".SplashActivity"
-            android:exported="false" /> <!-- <activity android:name=".MainActivity" -->
-        <!-- android:exported="true"/> -->
         <activity android:name=".views.launch.ReportActivity"
             android:exported="true"/>
         <activity android:name=".MainActivity"
