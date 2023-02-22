@@ -85,6 +85,13 @@ object DateHelper {
         val result = (minutes.toInt() % 3600) / 60;
         return result.toString()
     }
+    fun getMilliSecondT0DateFormat(milliSeconds:Long): String {
+        val formatter = SimpleDateFormat(ENCRYPTION_DATE_FORMAT, Locale.US)
+        val calendar = Calendar.getInstance()
+        calendar.timeInMillis = milliSeconds
+        return formatter.format(calendar.time)
+    }
+
 
     fun getStandardFormat(date: String): String {
         try {

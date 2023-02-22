@@ -7,15 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tracking.data.Expenses
-import com.google.android.material.imageview.ShapeableImageView
 
-class ExpensesAdapter (private val expensesList : ArrayList<Expenses>, var context: Context) :
-    RecyclerView.Adapter<ExpensesAdapter.MyViewHolder>() {
+class TotalExpensesAdapter (private val expensesList : ArrayList<Expenses>, var context: Context) :
+    RecyclerView.Adapter<TotalExpensesAdapter.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_expenses, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_tottal_expenses, parent, false)
         return MyViewHolder(itemView)
     }
 

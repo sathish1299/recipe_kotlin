@@ -1,47 +1,44 @@
 package com.example.tracking.views.launch
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.immortal.views.base.MyBaseFragment
-import com.example.tracking.*
+import com.example.tracking.Constants
+import com.example.tracking.ExpensesAdapter
+import com.example.tracking.R
+import com.example.tracking.TotalExpensesAdapter
 import com.example.tracking.data.Expenses
-import com.example.tracking.databinding.FragmentRemainderBinding
+import com.example.tracking.databinding.ActivityReportBinding
 import com.example.tracking.helpers.viewBinding
 
 
-class RemainderFragment : MyBaseFragment(R.layout.fragment_remainder) {
-    val binding by viewBinding (FragmentRemainderBinding::bind)
+class ReportActivity : AppCompatActivity() {
+    // TODO: Rename and change types of parameters
+
+    val binding by viewBinding(ActivityReportBinding::inflate)
     var dataList : ArrayList<Expenses>?= ArrayList()
     lateinit var title : Array<String>
     lateinit var amount : Array<String>
-    override fun onErrorCalled(it: String?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun initObservers() {
-        TODO("Not yet implemented")
-    }
-
+    val sharedPrefManager: com.example.tracking.manager.SharedPrefManager
+        get() {
+            return com.example.tracking.manager.SharedPrefManager.getInstance(this)
+        }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val titles = getSharedPrefManager().getPreference(Constants.DATA)
-        val amounts = getSharedPrefManager().getPreference(Constants.AMOUNT)
+        setContentView(binding.root)
+        val titles = sharedPrefManager.getPreference(Constants.DATA)
+        val amounts = sharedPrefManager.getPreference(Constants.AMOUNT)
         title = arrayOf("HouseLoan","Groceries","Current Bill",titles!!)
         amount = arrayOf("2000","3000","4000",amounts!!)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         initViews()
     }
     fun initViews(){
-        binding.expensesRV.layoutManager = LinearLayoutManager(context,
+        binding.totalExpensesRV.layoutManager = LinearLayoutManager(this,
             LinearLayoutManager.VERTICAL,false)
         getData()
     }
@@ -50,6 +47,7 @@ class RemainderFragment : MyBaseFragment(R.layout.fragment_remainder) {
             val data = Expenses(title[i],amount[i])
             dataList?.add(data)
         }
-        binding.expensesRV.adapter = ReminderAdapter(dataList!!,requireContext())
+        binding.totalExpensesRV.adapter = TotalExpensesAdapter(dataList!!,this)
     }
+
 }

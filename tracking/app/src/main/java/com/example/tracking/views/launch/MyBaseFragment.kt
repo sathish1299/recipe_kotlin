@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.tracking.R
+import com.example.tracking.manager.SharedPrefManager
 import com.google.android.material.snackbar.Snackbar
 
 abstract class MyBaseFragment(id:Int) : Fragment(id)  {
@@ -74,9 +75,9 @@ abstract class MyBaseFragment(id:Int) : Fragment(id)  {
     protected abstract fun initObservers()
 
 
-//    fun getSharedPrefManager(): SharedPrefManager {
-//        return SharedPrefManager.getInstance(requireContext())
-//    }
+    fun getSharedPrefManager(): SharedPrefManager {
+        return SharedPrefManager.getInstance(requireContext())
+    }
 
     fun hideKeyboard() {
         activity?.let {

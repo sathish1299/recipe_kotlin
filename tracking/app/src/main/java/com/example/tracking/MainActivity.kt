@@ -1,6 +1,5 @@
 package com.example.tracking
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +9,6 @@ import com.example.tracking.helpers.viewBinding
 import com.example.tracking.views.HomeFragment
 import com.example.tracking.views.launch.HistoryFragment
 import com.example.tracking.views.launch.RemainderFragment
-import com.example.tracking.views.launch.ReportFragment
 import com.example.tracking.views.launch.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
@@ -30,10 +28,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.history -> {
                     loadFragment(HistoryFragment())
-                    true
-                }
-                R.id.report -> {
-                    loadFragment(ReportFragment())
                     true
                 }
                 R.id.remainder -> {

@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">#C4C5FF</item>
+        <item name="colorOnPrimary">#FF3700B3</item>
+        <item name="buttonBarPositiveButtonStyle">@style/cancelButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/cancelButtonStyle</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Material3.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Material3.MediumComponent</item>
+        <!-- Customize text field of the text input mode. --></style>
+
+    <style name="cancelButtonStyle" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:textColor">#FF3700B3</item>
+    </style>
 </resources>

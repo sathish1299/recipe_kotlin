@@ -9,12 +9,17 @@
         <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.188" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_report.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.33433734939759036" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_view.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_remainder.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/item_expenses.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/item_reminder.xml" value="0.29157759726378796" />
+        <entry key="app/src/main/res/layout/item_tottal_expenses.xml" value="0.29243266353142366" />
         <entry key="app/src/main/res/layout/loader.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/bottom_home_menu.xml" value="0.35520833333333335" />
       </map>
